@@ -38,14 +38,17 @@ function handleSubmit(event) {
 
   clearLocalStorage();
 
-  document.querySelector('input[name="email"]').value = '';
-  document.querySelector('textarea[name="message"]').value = '';
+  const email = document.querySelector('input[name="email"]').value;
+  const message = document.querySelector('textarea[name="message"]').value;
 
   const data = {
-    email: '',
-    message: '',
+    email,
+    message,
   };
   console.log(data);
+
+  document.querySelector('input[name="email"]').value = '';
+  document.querySelector('textarea[name="message"]').value = '';
 }
 
 const feedbackForm = document.querySelector('.feedback-form');
